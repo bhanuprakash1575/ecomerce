@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root{
+  --secondary-color:#F5F5F5;
+}
+
+
+.container {
+  max-width: 1300px;    
+  margin: auto;
+}
+
+
+
+
+/* Add this to your global CSS */
+.swiper-pagination-bullet {
+  @apply bg-gray-400 w-3 h-3 mx-1 rounded-full opacity-50;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-red-500 opacity-100;
+}
+
+
+
