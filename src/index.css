@@ -2,6 +2,8 @@
 
 :root{
   --secondary-color:#F5F5F5;
+  --myred:#DB4444;
+  --secondary2-text: #D37643;
 }
 
 
@@ -10,7 +12,64 @@
   margin: auto;
 }
 
+.cat:hover{
+  color: white;
+  background-color: var(--myred)
+}
 
+.title{
+  @apply text-4xl pb-2;
+}
+
+.rectangle{
+  width: 20px;
+  height: 40px;
+  background-color: var(--myred);
+  border-radius: 5px
+}
+
+.fancy-title{
+  color: var(--myred);
+  font-weight: 600;
+}
+
+.timer{
+  .colan{
+    font-size: 30px;
+    color: var(--myred);
+  }
+
+  .time{
+    font-size: 30px;
+  }
+}
+
+.price{
+  color: var(--myred);
+  @apply mr-4
+}
+
+.old-price{
+  text-decoration: line-through;
+  @apply text-gray-500; 
+}
+
+.rating{
+  @apply text-gray-500
+}
+
+.rounded-arrows{
+  @apply bg-[var(--secondary-color)] text-4xl px-3 py-2 rounded-[50%] 
+}
+
+.add-to-cart-btn{
+  transition: all 0.3s ease;
+  @apply text-white bg-black px-1 py-2 translate-y-full text-center w-full left-0 bottom-0 absolute;
+}
+
+.productitem:hover .add-to-cart-btn {
+  @apply translate-y-0;
+}
 
 
 /* Add this to your global CSS */
