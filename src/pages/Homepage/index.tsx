@@ -4,6 +4,7 @@ import Flashsalesection from "./Flashsalesection";
 import BestSellingProducts from "./BestSellingProducts"
 import ExploreSection from "./ExploreSection";
 import NewArrivalsSection from "./NewArrivalsSection";
+import ServiceSection from "./ServiceSection";
 
 export default function Homepage() {
   return (
@@ -17,6 +18,7 @@ export default function Homepage() {
       </div>
       <ExploreSection/>
       <NewArrivalsSection />
+      <ServiceSection/>
     </div>
   );
 }

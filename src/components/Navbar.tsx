@@ -1,4 +1,5 @@
 import Searchbar from "./Searchbar";
+import { CiSearch } from "react-icons/ci";
 
 export default function Navbar() {
   return (
@@ -12,7 +13,11 @@ export default function Navbar() {
       </ul>
 
       <div className="flex items-center gap-6">
-        <Searchbar />
+        <Searchbar
+          placeholder="What are you looking for?"
+          className="bg-[var(--secondary-color)]"
+          Icon={CiSearch}
+        />
         <i className="fa-regular fa-heart scale-150"></i>
         <i className="fa-solid fa-cart-shopping scale-125"></i>
       </div>
