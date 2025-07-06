@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 
 export default function Navbar() {
   return (
-    <div className="container pt-7 pb-4  border-b flex items-center justify-between">
+    <div className="container pt-7 pb-4 mb-4  border-b flex items-center justify-between">
       <p className="text-2xl">Exclusive</p>
       <ul className="flex items-center gap-20">
         <li>Home</li>
@@ -16,7 +16,7 @@ export default function Navbar() {
         <Searchbar
           placeholder="What are you looking for?"
           className="bg-[var(--secondary-color)]"
-          Icon={CiSearch}
+          Icon={<CiSearch size={28} />}
         />
         <i className="fa-regular fa-heart scale-150"></i>
         <i className="fa-solid fa-cart-shopping scale-125"></i>

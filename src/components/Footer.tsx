@@ -19,7 +19,7 @@ export default function Footer() {
             <Searchbar
               placeholder="Enter your email"
               className="border border-white rounded"
-              Icon={IoMdSend}
+              Icon={<IoMdSend/>}
             />
           </li>
         </ul>

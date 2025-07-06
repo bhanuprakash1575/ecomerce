@@ -5,6 +5,7 @@ import BestSellingProducts from "./BestSellingProducts"
 import ExploreSection from "./ExploreSection";
 import NewArrivalsSection from "./NewArrivalsSection";
 import ServiceSection from "./ServiceSection";
+import AdvertiseSection from "./AdvertiseSection";
 
 export default function Homepage() {
   return (
@@ -12,13 +13,11 @@ export default function Homepage() {
       <Herosection />
       <Flashsalesection />
       <Categoriessection />
-      <BestSellingProducts/>
-      <div className="container max-h-64 overflow-hidden">
-        <img className="object-contain" src='/JBL.png' alt="JBL"/>
-      </div>
-      <ExploreSection/>
+      <BestSellingProducts />
+      <AdvertiseSection/>
+      <ExploreSection />
       <NewArrivalsSection />
-      <ServiceSection/>
+      <ServiceSection />
     </div>
   );
 }
