@@ -26,7 +26,7 @@ export default function AdvertiseSection() {
           </div>
         </div>
         <div>
-          <FancyButton text="Buy Now" />
+          <FancyButton>Buy Now</FancyButton>
         </div>
       </div>
       <div className="relative w-2/3 flex justify-center items-center h-[500px] bg-black overflow-hidden rounded">

@@ -1,7 +1,7 @@
-import Herosection from "../../components/Herosection";
+import Herosection from "./Herosection";
 import Categoriessection from "./Categoriessection";
 import Flashsalesection from "./Flashsalesection";
-import BestSellingProducts from "./BestSellingProducts"
+import BestSellingProducts from "./BestSellingProducts";
 import ExploreSection from "./ExploreSection";
 import NewArrivalsSection from "./NewArrivalsSection";
 import ServiceSection from "./ServiceSection";
@@ -14,7 +14,7 @@ export default function Homepage() {
       <Flashsalesection />
       <Categoriessection />
       <BestSellingProducts />
-      <AdvertiseSection/>
+      <AdvertiseSection />
       <ExploreSection />
       <NewArrivalsSection />
       <ServiceSection />

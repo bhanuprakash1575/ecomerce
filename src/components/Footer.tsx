@@ -1,9 +1,6 @@
 import Searchbar from "./Searchbar";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
+import SocialMedia from "./SocialMedia";
 
 export default function Footer() {
   return (
@@ -60,11 +57,8 @@ export default function Footer() {
               <img className="size-35 object-cover h-full scale-x-110" src="/playstore.png" alt="playstore" />
               <img className="size-35 object-cover h-full" src="/appstore.png" alt="appstore" />
           </li>
-          <li className="flex gap-4">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaInstagram />
-            <FaLinkedinIn />
+          <li>
+            <SocialMedia />
           </li>
         </ul>
       </div>
