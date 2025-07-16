@@ -1,35 +1,37 @@
-import{ type JSX} from "react";
+import { type JSX } from "react";
 
 type HeaderTitleProps = {
-    title : string,
-    heading : string,
-    SpecialComp : JSX.Element | null,
-    LastComp: JSX.Element | null,
-}
+  title?: string;
+  heading?: string;
+  SpecialComp?: JSX.Element | null;
+  LastComp: JSX.Element | null;
+};
 
-export default function HeaderTitle({title,heading,SpecialComp,LastComp,} : HeaderTitleProps) {
-    
+export default function HeaderTitle({
+  title,
+  heading,
+  SpecialComp,
+  LastComp,
+}: HeaderTitleProps) {
   return (
-    <div>
-      <Fancytitle title={title} />
-      <div className="flex items-end gap-10">
-        <div className="flex items-end gap-10 flex-1">
+    <div className="flex items-end gap-10">
+      <div className="flex items-end gap-10 flex-1">
+        <div>
+          <Fancytitle title={title} />
           <p className="title">{heading}</p>
-          {SpecialComp && SpecialComp}
         </div>
-        {LastComp && LastComp}
+        {SpecialComp && SpecialComp}
       </div>
+      {LastComp && LastComp}
     </div>
   );
 }
 
-
-function Fancytitle({ title }: { title: string }) {
+function Fancytitle({ title }: { title?: string }) {
   return (
     <div className="flex items-center gap-4 mb-3">
-      <div className="rectangle"></div>
+      {title && <div className="rectangle"></div>}
       <div className="fancy-title">{title}</div>
     </div>
   );
 }
-

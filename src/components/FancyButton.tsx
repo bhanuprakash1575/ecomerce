@@ -13,7 +13,7 @@ export default function FancyButton({
     <div
       className={`${
         isPrimary ? "bg-[var(--myred)]  text-white" : " text-black border "
-      } text-center py-3 px-6 w-fit rounded mt-6 mx-auto ${className}`}
+      } text-center py-3 px-6 h-fit w-fit rounded ${className}`}
     >
       {children}
     </div>

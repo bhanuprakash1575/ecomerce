@@ -18,7 +18,9 @@ export default function ExploreSection() {
             products.map((_,i)=><Productitem key={i}/>)
         }
       </div>
-      <FancyButton text="View All Products"/>
+      <FancyButton className="mx-auto my-8">
+        View All Products
+      </FancyButton>
 
     </div>
   );

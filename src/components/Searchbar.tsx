@@ -3,7 +3,7 @@ import type { JSX } from "react";
 interface SearchbarProps{
   className:string,
   placeholder : string,
-  Icon : JSX.Element
+  Icon ?: JSX.Element
 }
 
 export default function Searchbar({className, placeholder, Icon}:SearchbarProps) {

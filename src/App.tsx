@@ -4,6 +4,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignUp from "./pages/Singup";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import MyAccount from "./pages/MyAccountPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import CartPage from "./pages/CartPage";
+import WishlistPage from "./pages/WhishlistPage";
 function App() {
   return (
     <>
@@ -12,6 +17,11 @@ function App() {
       <Homepage />
       {/* <SignUp/> */}
       {/* <AboutPage/> */}
+      {/* <ContactPage/> */}
+      {/* <MyAccount/> */}
+      {/* <CheckoutPage/> */}
+      {/* <CartPage/> */}
+      {/* <WishlistPage/> */}
       <Footer/>
     </>
   );

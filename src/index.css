@@ -7,6 +7,10 @@
   --neutral-color: #7c818e;
 }
 
+input:focus{
+  outline: none;
+}
+
 .container {
   max-width: 1300px;
   margin: auto;
@@ -103,37 +107,120 @@ footer {
 
 .signup-form {
   @apply w-full mt-8 flex flex-col gap-8;
-  
-  .input-group{
+
+  .input-group {
     position: relative;
     input {
       border-bottom: 1px solid black;
       outline: none;
     }
-    p{
+    p {
       position: absolute;
       bottom: 0;
       transition: 0.3s ease all;
-      color : var(--neutral-color);
+      color: var(--neutral-color);
     }
   }
 
   .input-group input:focus + p,
-  .input-group input:not(:placeholder-shown) + p{
-    @apply text-xs top-0 -translate-y-[70%];
+  .input-group input:not(:placeholder-shown) + p {
+    @apply text-xs top-0 -translate-y-[40%];
+  }
+}
+
+.fancy-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.account-nav-sidebar {
+  ul {
+    @apply flex flex-col gap-1;
+    li {
+      @apply font-light text-[var(--neutral-color)] pl-8;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: var(--myred);
+}
+
+.total-billing-section {
+  li {
+    @apply flex justify-between py-2;
+  }
+}
+
+.orderitems-list {
+  @apply flex flex-col gap-4;
+  li {
+    @apply flex items-center justify-between;
+    div {
+      @apply flex items-center gap-3;
+      img {
+        @apply h-20 w-20;
+      }
+    }
   }
 }
 
 
-/* .myaccount-dropdown{
-  ul {
-    background-color: beige;
-    background;
-    li{
-      display: flex
-    }
-  }
-} */
+
+
+
+
+
+
+
+
+.cart-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  border-collapse: separate;
+  margin-bottom: 20px;
+  border-spacing: 0 20px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.cart-table thead tr, .cart-table tbody tr{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-cell img {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Add this to your global CSS */
 .swiper-pagination-bullet {
