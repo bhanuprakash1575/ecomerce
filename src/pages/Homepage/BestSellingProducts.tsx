@@ -10,7 +10,7 @@ export default function BestSellingProducts() {
         title="This Month"
         heading="Best Selling Products"
         SpecialComp={null}
-        LastComp={<FancyButton text="View All" />}
+        LastComp={<FancyButton>View All</FancyButton>}
       />
       <div
         className="flash-sale--products mt-6 flex overflow-x-auto gap-4"

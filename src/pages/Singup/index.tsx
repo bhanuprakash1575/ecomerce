@@ -57,11 +57,11 @@ const SingupForm = ({toggleForm} : singupFormProps) => {
   return (
     <>
       <form className="signup-form">
-        <FancyInput />
-        <FancyInput />
-        <FancyInput />
+        <FancyInput label="Name" />
+        <FancyInput label="Email or Phone Number" />
+        <FancyInput label="Password" />
       </form>
-      <div>
+      <div className=" mt-6 flex flex-col gap-4">
         <FancyButton className="w-full py-0">Create Account</FancyButton>
         <FancyButton isPrimary={false} className="py-0 w-full">
           <div className="flex items-center gap-2 w-fit mx-auto">
@@ -85,8 +85,8 @@ const LoginForm = ({toggleForm} : loginFormProps) => {
   return (
     <>
       <form className="signup-form">
-        <FancyInput />
-        <FancyInput />
+        <FancyInput label="Email or Phone Number" />
+        <FancyInput label="Password" />
       </form>
       <div className="flex items-center justify-between mt-8">
         <FancyButton className="!mt-0 ml-0">Log In</FancyButton>
