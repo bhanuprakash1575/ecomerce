@@ -25,6 +25,10 @@ input:focus{
   @apply text-4xl pb-2;
 }
 
+.nav-active {
+  @apply border-b-2 border-red-500;
+}
+
 .rectangle {
   width: 20px;
   height: 40px;

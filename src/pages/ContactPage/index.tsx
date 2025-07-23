@@ -1,6 +1,5 @@
 import { FiPhone } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
-import FancyInput from "../../components/FancyInput";
 import FancyButton from "../../components/FancyButton";
 import Searchbar from "../../components/Searchbar";
 

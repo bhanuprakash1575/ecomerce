@@ -1,8 +1,19 @@
 import Searchbar from "./Searchbar";
 import { IoMdSend } from "react-icons/io";
 import SocialMedia from "./SocialMedia";
+import { Link, useLocation } from "react-router";
+import { useEffect } from "react";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or 'smooth' for smooth scrolling
+    });
+  }, [pathname]);
+
   return (
     <footer className="bg-black text-white flex justify-evenly py-14 mt-12">
       <div>
@@ -16,7 +27,7 @@ export default function Footer() {
             <Searchbar
               placeholder="Enter your email"
               className="border border-white rounded"
-              Icon={<IoMdSend/>}
+              Icon={<IoMdSend />}
             />
           </li>
         </ul>
@@ -32,11 +43,11 @@ export default function Footer() {
       <div>
         <p className="group-title">Account</p>
         <ul>
-          <li>My Account</li>
-          <li>Login / Register</li>
-          <li>Cart</li>
-          <li>Wishlist</li>
-          <li>Shop</li>
+          <Link to="/myaccount">My Account</Link>
+          <Link to="/signup">Login / Register</Link>
+          <Link to="/cart">Cart</Link>
+          <Link to="/wishlist">Wishlist</Link>
+          <Link to="/">Shop</Link>
         </ul>
       </div>
       <div>
@@ -53,9 +64,21 @@ export default function Footer() {
         <ul>
           <li>Save $3 with App New User Only</li>
           <li className="grid grid-cols-2 grid-rows-2 h-24 items-start">
-              <img className="size-30 row-span-2 h-full" src="/qrcode.jpg" alt="ar" />
-              <img className="size-35 object-cover h-full scale-x-110" src="/playstore.png" alt="playstore" />
-              <img className="size-35 object-cover h-full" src="/appstore.png" alt="appstore" />
+            <img
+              className="size-30 row-span-2 h-full"
+              src="/qrcode.jpg"
+              alt="ar"
+            />
+            <img
+              className="size-35 object-cover h-full scale-x-110"
+              src="/playstore.png"
+              alt="playstore"
+            />
+            <img
+              className="size-35 object-cover h-full"
+              src="/appstore.png"
+              alt="appstore"
+            />
           </li>
           <li>
             <SocialMedia />

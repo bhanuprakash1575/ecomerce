@@ -3,8 +3,18 @@
   import { Pagination, Autoplay } from "swiper/modules";
 
   // Styles
+  // import "swiper/css";
+  // import "swiper/css/pagination";
+
+  // import "swiper/swiper-bundle.min.css";
+  // // or
+  // import "swiper/swiper.min.css";
   import "swiper/css";
   import "swiper/css/pagination";
+  import "swiper/css/autoplay";
+
+
+
 
   export default function Bannersection({CompArray}:any) {
     return (

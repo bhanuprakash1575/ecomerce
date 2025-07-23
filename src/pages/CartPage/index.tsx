@@ -1,4 +1,3 @@
-import React from "react";
 import AppInput from "../../components/AppInput";
 import FancyButton from "../../components/FancyButton";
 import BillingSummary from "../../components/BillingSummary";
