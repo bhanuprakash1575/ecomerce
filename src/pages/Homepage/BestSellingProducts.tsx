@@ -5,7 +5,7 @@ import Productitem from "../../components/Productitem";
 export default function BestSellingProducts() {
   const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
-    <div className="container">
+    <section className="container">
       <HeaderTitle
         title="This Month"
         heading="Best Selling Products"
@@ -19,6 +19,6 @@ export default function BestSellingProducts() {
           <Productitem key={i} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

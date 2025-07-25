@@ -3,17 +3,18 @@ import Productitem from "../../components/Productitem";
 import { useRef } from "react";
 import HeaderTitle from "../../components/HeaderTitle";
 import Scrollbuttons from "../../components/Scrollbuttons";
+import FancyButton from "../../components/FancyButton";
 export default function Flashsalesection() {
-    const scrollRef = useRef<HTMLDivElement>(null)
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-    const items = [1,2,3,4,5,6]
+  const items = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="container border-b pb-12 ">
+    <section className="container border-b pb-12 ">
       <HeaderTitle
         title="Today's"
         heading="Flash Sales"
-        SpecialComp={<Timer/>}
-        LastComp={<Scrollbuttons scrollRef={scrollRef}/>}
+        SpecialComp={<Timer endDate={new Date("2025-08-15T00:00:00")} />}
+        LastComp={<Scrollbuttons scrollRef={scrollRef} />}
       />
       <div
         ref={scrollRef}
@@ -21,9 +22,9 @@ export default function Flashsalesection() {
       >
         {items.map((_, i) => (
           <Productitem key={i} />
-        ))}   
+        ))}
       </div>
-      <div className="bg-[var(--myred)] text-white py-3 px-6 w-fit rounded mt-6 mx-auto">View All Products</div>
-    </div>
+      <FancyButton className="mx-auto mt-6">View All Products</FancyButton>
+    </section>
   );
 }

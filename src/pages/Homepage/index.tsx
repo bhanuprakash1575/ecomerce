@@ -9,7 +9,7 @@ import AdvertiseSection from "./AdvertiseSection";
 
 export default function Homepage() {
   return (
-    <div className="flex flex-col gap-12">
+    <main className="flex flex-col gap-12">
       <Herosection />
       <Flashsalesection />
       <Categoriessection />
@@ -18,6 +18,6 @@ export default function Homepage() {
       <ExploreSection />
       <NewArrivalsSection />
       <ServiceSection />
-    </div>
+    </main>
   );
 }

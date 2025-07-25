@@ -4,7 +4,7 @@ import BillingSummary from "../../components/BillingSummary";
 
 export default function CartPage() {
   return (
-    <div className="container">
+    <main className="container">
       <table className="cart-table">
         <thead>
           <tr>
@@ -43,8 +43,8 @@ export default function CartPage() {
       </table>
 
       <div className="flex items-center justify-between">
-        <FancyButton isPrimary={false}>Return To Shop</FancyButton>
-        <FancyButton isPrimary={false}>Update Cart</FancyButton>
+        <FancyButton btnType="secondary">Return To Shop</FancyButton>
+        <FancyButton btnType="secondary">Update Cart</FancyButton>
       </div>
 
       <div className="flex justify-between mt-16">
@@ -58,7 +58,7 @@ export default function CartPage() {
             <FancyButton className="mx-auto">Proceed to Checkout</FancyButton>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

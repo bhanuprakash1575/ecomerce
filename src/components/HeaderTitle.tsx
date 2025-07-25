@@ -4,7 +4,7 @@ type HeaderTitleProps = {
   title?: string;
   heading?: string;
   SpecialComp?: JSX.Element | null;
-  LastComp: JSX.Element | null;
+  LastComp?: JSX.Element | null;
 };
 
 export default function HeaderTitle({
@@ -20,9 +20,9 @@ export default function HeaderTitle({
           <Fancytitle title={title} />
           <p className="title">{heading}</p>
         </div>
-        {SpecialComp && SpecialComp}
+        {SpecialComp}
       </div>
-      {LastComp && LastComp}
+      {LastComp}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import ServiceCard from "../../components/ServiceCard";
 
 export default function Acheivemets() {
   return (
-    <div className=" flex gap-4 justify-between">
+    <section className=" flex gap-4 justify-between">
       <div className="border p-8">
         <ServiceCard
           Logo={TbTruckDelivery}
@@ -32,6 +32,6 @@ export default function Acheivemets() {
           description="Free delivery for all orders over $140"
         />
       </div>
-    </div>
+    </section>
   );
 }

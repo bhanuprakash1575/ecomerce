@@ -6,7 +6,7 @@ import Scrollbuttons from "../../components/Scrollbuttons";
 export default function ExploreSection() {
     const products = [1,2,3,4,5,6,7,8]
   return (
-    <div className="container">
+    <section className="container">
       <HeaderTitle
         title="Our Products"
         heading="Explore Our Products"
@@ -22,6 +22,6 @@ export default function ExploreSection() {
         View All Products
       </FancyButton>
 
-    </div>
+    </section>
   );
 }

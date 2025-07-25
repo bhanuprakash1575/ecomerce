@@ -3,7 +3,7 @@ import Bannersection from "../../components/Bannersection";
 
 export default function MembersSection() {
   return (
-    <div>
+    <section>
       <Bannersection
         CompArray={[
           <CarasoulComp />,
@@ -12,7 +12,7 @@ export default function MembersSection() {
           <CarasoulComp />,
         ]}
       />
-    </div>
+    </section>
   );
 }
 

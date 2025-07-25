@@ -1,22 +1,31 @@
 import type { ReactNode } from "react";
 
+type btnType = "primary" | "secondary" | "justText";
+
 export default function FancyButton({
   className,
   children,
-  isPrimary = true,
+  btnType = "primary",
+  handleClick
 }: {
   className?: string;
   children: ReactNode;
-  isPrimary?: boolean;
+  btnType?: btnType;
+  handleClick?: () => void;
+  
 }) {
+  const btnStyle = {
+    "primary":"bg-[var(--myred)] text-white",
+    "secondary":"text-black border",
+    "justText":"text-[var(--myred)]"
+  };
   return (
-    <div
-      className={`${
-        isPrimary ? "bg-[var(--myred)]  text-white" : " text-black border "
-      } text-center py-3 px-6 h-fit w-fit rounded ${className}`}
+    <button
+      onClick={handleClick}
+      className={`cursor-pointer ${btnStyle[btnType]} text-center py-3 px-6 h-fit w-fit rounded ${className}`}
     >
       {children}
-    </div>
+    </button>
   );
 }
   

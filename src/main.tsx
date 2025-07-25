@@ -1,8 +1,5 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-
 import {
   RouterProvider,
   createRoutesFromElements,
@@ -10,14 +7,16 @@ import {
   Route,
 } from "react-router-dom";
 
-import Homepage from "./pages/Homepage";
+import "./index.css";
 
-import SignUp from "./pages/Singup";
+import App from "./App.tsx";
 import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import MyAccount from "./pages/MyAccountPage";
-import CheckoutPage from "./pages/CheckoutPage";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import ContactPage from "./pages/ContactPage";
+import Homepage from "./pages/Homepage";
+import MyAccount from "./pages/MyAccountPage";
+import SignUp from "./pages/Singup";
 import WishlistPage from "./pages/WhishlistPage";
 
 const router = createBrowserRouter(
@@ -25,7 +24,7 @@ const router = createBrowserRouter(
       <Route
         path="/"
         element={<App />}
-        errorElement={<div>Error occurred</div>}
+        errorElement={<div>Page Not Found</div>}
       >
         <Route path="" element={<Homepage />} />
         <Route path="/signup" element={<SignUp />} />

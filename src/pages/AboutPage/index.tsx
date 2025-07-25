@@ -5,11 +5,11 @@ import ServiceSection from "./ServiceSection";
 
 export default function AboutPage() {
   return (
-    <div className="container flex flex-col gap-16">
+    <main className="container flex flex-col gap-16">
       <HeroSection />
       <Acheivemets />
       <MembersSection />
       <ServiceSection />
-    </div>
+    </main>
   );
 }

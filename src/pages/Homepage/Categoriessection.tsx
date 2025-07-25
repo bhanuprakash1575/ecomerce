@@ -11,7 +11,7 @@ export default function Categoriessection() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="container pb-14 border-b ">
+    <section className="container pb-14 border-b ">
       <HeaderTitle
         title="Categories"
         heading="Browse By Category"
@@ -24,14 +24,14 @@ export default function Categoriessection() {
           <CategoryItem key={i} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
 
 const CategoryItem = () => {
   return (
-    <div className="border w-fit flex flex-col justify-center items-center min-w-[170px] h-36 cat">
+    <div className="cursor-pointer border w-fit flex flex-col justify-center items-center min-w-[170px] h-36 cat">
       <BsPhone className="" size={48} />
       <p className="mt-4">phones</p>
     </div>

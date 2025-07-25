@@ -3,7 +3,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 
 export default function ServiceSection() {
   return (
-    <div className="flex justify-evenly ">
+    <section className="flex justify-evenly ">
       <ServiceCard
         Logo={TbTruckDelivery}
         title="FREE AND FAST DELIVERY"
@@ -19,6 +19,6 @@ export default function ServiceSection() {
         title="FREE AND FAST DELIVERY"
         description="Free delivery for all orders over $140"
       />
-    </div>
+    </section>
   );
 }

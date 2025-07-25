@@ -1,45 +1,47 @@
 import { useEffect, useRef, useState } from "react";
-import Searchbar from "./Searchbar";
-import { CiSearch } from "react-icons/ci";
+import { NavLink, Link } from "react-router";
 import { CiHeart } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { LuUser } from "react-icons/lu";
-import { NavLink, Link } from "react-router";
+
+import { accountItems } from "../constants";
+import Searchbar from "./Searchbar";
+
+
+const navItems = {
+  Home: "", // Home links to the root path
+  Contact: "contact",
+  About: "about",
+  "Sign Up": "signup",
+};
+
 
 export default function Navbar() {
-  const navItems = {
-    Home: "", // Home links to the root path
-    Contact: "contact",
-    About: "about",
-    "Sign Up": "signup",
-  };
+  
   return (
-    <div className="container pt-7 pb-4 mb-4  border-b flex items-center justify-between">
+    <header className="container pt-7 pb-4 mb-4  border-b flex items-center justify-between">
       <p className="text-2xl">Exclusive</p>
-      <ul className="flex items-center gap-20">
+      <nav className="flex items-center gap-20">
         {Object.entries(navItems).map(([key, value]) => (
           <NavItem key={key} text={key} linktext={value} />
         ))}
-      </ul>
-
+      </nav>
       <div className="flex items-center gap-6">
         <Searchbar
           placeholder="What are you looking for?"
           className="bg-[var(--secondary-color)]"
           Icon={<CiSearch size={28} />}
         />
-
         <Link to="/wishlist">
-          {" "}
           <FancyNavIcon Comp={<CiHeart size={36} />} />
         </Link>
         <Link to="/cart">
-          {" "}
           <FancyNavIcon Comp={<IoCartOutline size={36} />} />
         </Link>
         <MyAccount />
       </div>
-    </div>
+    </header>
   );
 }
 
@@ -71,6 +73,7 @@ const MyAccount = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
   return (
     <div ref={dropdownRef} className="relative inline-block text-left">
       <button
@@ -93,28 +96,19 @@ const MyAccount = () => {
           !showDropdown && "hidden"
         } absolute right-0 mt-2 w-64 rounded-lg shadow-lg bg-[var(--neutral-color)]/30 backdrop-blur-lg text-white p-4 z-50`}
       >
-        <Link to="/myaccount" onClick={() => setShowDropdown(false)}>
-          <div className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer">
-            <span className="text-xl">👤</span>
-            <span>Manage My Account</span>
-          </div>
-        </Link>
-        <div className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer">
-          <span className="text-xl">🛍️</span>
-          <span>My Order</span>
-        </div>
-        <div className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer">
-          <span className="text-xl">❌</span>
-          <span>My Cancellations</span>
-        </div>
-        <div className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer">
-          <span className="text-xl">⭐</span>
-          <span>My Reviews</span>
-        </div>
-        <div className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer">
-          <span className="text-xl">↩️</span>
-          <span>Logout</span>
-        </div>
+        {
+          accountItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.link}
+              onClick={() => setShowDropdown(false)}
+              className="flex items-center gap-3 p-2 hover:bg-white/10 rounded cursor-pointer"
+            >
+              <span className="text-xl">{item.icon}</span>
+              <span>{item.text}</span>
+            </Link>
+          ))
+        }
       </div>
     </div>
   );

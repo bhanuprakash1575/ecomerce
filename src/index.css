@@ -216,6 +216,9 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.timer-bg{
+  @apply w-20 h-20 bg-white text-black flex flex-col justify-center items-center rounded-full;
+}
 
 
 

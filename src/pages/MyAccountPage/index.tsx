@@ -3,7 +3,7 @@ import FancyButton from "../../components/FancyButton";
 
 export default function MyAccount() {
   return (
-    <div className="container">
+    <main className="container">
       <p className="text-end py-8">Hello User!</p>
       <div className="flex gap-8">
         <div className="account-nav-sidebar flex flex-col gap-2 w-1/4">
@@ -62,6 +62,6 @@ export default function MyAccount() {
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 }

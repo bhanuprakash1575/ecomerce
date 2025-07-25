@@ -1,7 +1,6 @@
-    
 export default function HeroSection() {
   return (
-    <div className=" grid grid-cols-2 items-center gap-8 pt-9">
+    <section className=" grid grid-cols-2 items-center gap-8 pt-9">
       <div>
         <h1 className="text-6xl mb-8">Our Story</h1>
         <p className="whitespace-pre-line">
@@ -17,9 +16,7 @@ export default function HeroSection() {
               categories ranging from consumer.`}
         </p>
       </div>
-      <div>
-        <img src="/About.jpg" alt="about" />
-      </div>
-    </div>
+      <img src="/About.jpg" alt="about" />
+    </section>
   );
 }

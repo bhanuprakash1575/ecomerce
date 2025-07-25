@@ -5,7 +5,7 @@ import Searchbar from "../../components/Searchbar";
 
 export default function ContactPage() {
   return (
-    <div className="container flex gap-3 p-8">
+    <main className="container flex gap-3 p-8">
       <div className="w-1/3 fancy-shadow px-8 py-12">
         <ul className="flex flex-col gap-3 pb-8 border-b">
           <li className="flex items-center gap-2">
@@ -54,6 +54,6 @@ export default function ContactPage() {
           <FancyButton>Send Meassage</FancyButton>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

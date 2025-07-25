@@ -6,26 +6,22 @@ export default function Herosection() {
     <img src="/po_iphone_2020.png" className="" alt="Slide 1" />,
   ];
 
+  const catItems = ["Woman's Fashion", "Men's Fashion", "Electronics", "Home & Lifestyle", "Medicine", "Sports & Outdoor", "Baby's & Toys", "Groceries & Pets", "Health & Beauty"];
+  const MultiCatItems = ["Woman's Fashion", "Men's Fashion"];
+
   return (
-    <div className="container flex">
+    <section className="container flex">
       <ul className="pt-6 border-r min-w-1/4 flex flex-col gap-4">
-        <li className="flex items-center justify-between w-1/2">
-          <p>Woman's Fashion</p>
-          <i className="fa-solid fa-greater-than scale-75"></i>
-        </li>
-        <li className="flex items-center justify-between w-1/2">
-          <p>Men's Fashion</p>
-          <i className="fa-solid fa-greater-than scale-75"></i>
-        </li>
-        <li>Electronics</li>
-        <li>Home & Lifestyle</li>
-        <li>Medicine</li>
-        <li>Sports & Outdoor</li>
-        <li>Baby's & Toys</li>
-        <li>Groceries & Pets</li>
-        <li>Health & Beauty</li>
+      {
+        catItems.map((item, index) => (
+          <li key={index} className="flex items-center justify-between w-1/2">
+            <p>{item}</p>
+            {MultiCatItems.includes(item) && <i className="fa-solid fa-greater-than scale-75"></i>}
+          </li>
+        ))
+      }
       </ul>
       <Bannersection CompArray={BannerArray} />
-    </div>
+    </section>
   );
 }

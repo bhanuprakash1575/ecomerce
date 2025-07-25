@@ -2,7 +2,7 @@ import HeaderTitle from "../../components/HeaderTitle";
 
 export default function NewArrivalsSection() {
   return (
-    <div className="container">
+    <section className="container">
       <HeaderTitle
         title="Featured"
         heading="New Arrival"
@@ -39,7 +39,7 @@ export default function NewArrivalsSection() {
           description="GUCCI INTENSE OUD EDP"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

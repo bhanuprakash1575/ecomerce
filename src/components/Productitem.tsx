@@ -7,9 +7,9 @@ export default function Productitem() {
     <div>
       <div className="productitem w-2xs h-64 mb-4 overflow-hidden grid place-items-center p-14 bg-[var(--secondary-color)] relative">
         <img className="object-fit" src="/console.png" alt="console" />
-        <p className="absolute bg-[var(--myred)] left-3 top-3 p-1 rounded text-white font-extralight">
+        {<p className="absolute bg-[var(--myred)] left-3 top-3 p-1 rounded text-white font-extralight">
           -40%
-        </p>
+        </p>}
         <div className="absolute top-3 right-3 flex flex-col items-center gap-2">
           <CiHeart size={38} className="bg-white rounded-full p-1" />
           <FiEye size={34} className="bg-white rounded-full p-[4px]" />
